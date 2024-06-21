@@ -1,5 +1,7 @@
 import 'dart:io';
 import 'package:best_flutter_ui_templates/app_theme.dart';
+import 'package:best_flutter_ui_templates/auth/home_screen.dart';
+import 'package:best_flutter_ui_templates/auth/signin/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'fitness_app/fitness_app_home_screen.dart';
@@ -29,16 +31,20 @@ class MyApp extends StatelessWidget {
       title: 'Flutteree UI',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-        //primarySwatch: Colors.blue,
+        primarySwatch: Colors.blue,
         textTheme: AppTheme.textTheme,
         platform: TargetPlatform.iOS,
       ),
       darkTheme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.blue,
         brightness: Brightness.dark,
       ),
-      home: FitnessAppHomeScreen(),
+      initialRoute: LoginScreen.id,
+      routes: {
+        LoginScreen.id: (context) => const LoginScreen(),
+        FitnessAppHomeScreen.id: (context) => FitnessAppHomeScreen(),
+        HomeScreen.id: (context) => HomeScreen(),
+      },
     );
   }
 }

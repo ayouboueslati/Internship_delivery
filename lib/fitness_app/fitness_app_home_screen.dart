@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import '../Pickup/pickup_home_screen.dart';
 import '../Profile/pages/profile_page.dart';
 import '../Runsheets/runsheet_home_screen.dart';
-//import '../pick.dart';
 import 'bottom_navigation_view/bottom_bar_view.dart';
 import 'fitness_app_theme.dart';
 import 'my_diary/pie_chart_screen.dart';
 
 class FitnessAppHomeScreen extends StatefulWidget {
+  static String id =
+      'fitness_app_home_screen'; // Ensure the ID is correctly defined
+
   @override
   _FitnessAppHomeScreenState createState() => _FitnessAppHomeScreenState();
 }
@@ -90,8 +92,6 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                 setState(() {
                   tabBody = RunsheetHomeScreen(
                       animationController: animationController);
-
-                  /// MyHome(animationController: animationController);
                 });
               });
             } else if (index == 1) {
@@ -113,7 +113,6 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                 setState(() {
                   tabBody =
                       MyDiaryScreen(animationController: animationController);
-                  //tabBody = ProfilePage(animationController: animationController);
                 });
               });
             } else if (index == 3) {
@@ -124,7 +123,6 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                 setState(() {
                   tabBody =
                       ProfilePage(animationController: animationController);
-                  //tabBody = PickScreen();
                 });
               });
             }

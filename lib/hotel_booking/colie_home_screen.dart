@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:best_flutter_ui_templates/hotel_booking/colie_list_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/model/colie_list_data.dart';
 import 'package:flutter/material.dart';
@@ -365,8 +367,9 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                           ];
                         },
                         body: Container(
-                          color:
-                              HotelAppTheme.buildLightTheme().backgroundColor,
+                          color: HotelAppTheme.buildLightTheme()
+                              .colorScheme
+                              .surface,
                           child: ListView.builder(
                             itemCount: hotelList.length,
                             padding: const EdgeInsets.only(top: 8),
@@ -404,7 +407,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
             child: Icon(
               Icons.add,
               size: 30,
-              color: HotelAppTheme.buildLightTheme().backgroundColor,
+              color: HotelAppTheme.buildLightTheme().colorScheme.surface,
               opticalSize: 23,
             ),
           ),
@@ -423,7 +426,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
               padding: const EdgeInsets.only(right: 16, top: 8, bottom: 8),
               child: Container(
                 decoration: BoxDecoration(
-                  color: HotelAppTheme.buildLightTheme().backgroundColor,
+                  color: HotelAppTheme.buildLightTheme().colorScheme.surface,
                   borderRadius: const BorderRadius.all(
                     Radius.circular(38.0),
                   ),
@@ -488,7 +491,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                   child: Icon(
                     FontAwesomeIcons.magnifyingGlass,
                     size: 20,
-                    color: HotelAppTheme.buildLightTheme().backgroundColor,
+                    color: HotelAppTheme.buildLightTheme().colorScheme.surface,
                   ),
                 ),
               ),
@@ -502,7 +505,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
   Widget getListUI() {
     return Container(
       decoration: BoxDecoration(
-        color: HotelAppTheme.buildLightTheme().backgroundColor,
+        color: HotelAppTheme.buildLightTheme().colorScheme.surface,
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),

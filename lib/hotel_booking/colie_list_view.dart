@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:best_flutter_ui_templates/hotel_booking/colie_app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -72,7 +74,8 @@ class HotelListView extends StatelessWidget {
                           children: <Widget>[
                             Container(
                               color: HotelAppTheme.buildLightTheme()
-                                  .backgroundColor,
+                                  .colorScheme
+                                  .background,
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.start,
